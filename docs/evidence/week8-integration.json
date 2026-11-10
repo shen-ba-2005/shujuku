@@ -1,0 +1,185 @@
+{
+  "checks": [
+    {
+      "name": "空开发库重建 8 表和种子数据",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "非法外键拒绝",
+      "passed": true,
+      "detail": {
+        "mysql_error": 1452
+      }
+    },
+    {
+      "name": "同用户支付名唯一",
+      "passed": true,
+      "detail": {
+        "mysql_error": 1062
+      }
+    },
+    {
+      "name": "非空约束拒绝",
+      "passed": true,
+      "detail": {
+        "mysql_error": 1048
+      }
+    },
+    {
+      "name": "负金额拒绝",
+      "passed": true,
+      "detail": {
+        "mysql_error": 3819
+      }
+    },
+    {
+      "name": "非法周期拒绝",
+      "passed": true,
+      "detail": {
+        "mysql_error": 3819
+      }
+    },
+    {
+      "name": "非法预算月首拒绝",
+      "passed": true,
+      "detail": {
+        "mysql_error": 3819
+      }
+    },
+    {
+      "name": "取消事件不得记正支出",
+      "passed": true,
+      "detail": {
+        "mysql_error": 3819
+      }
+    },
+    {
+      "name": "历史引用保护删除",
+      "passed": true,
+      "detail": {
+        "mysql_error": 1451
+      }
+    },
+    {
+      "name": "JOIN / GROUP BY / EXISTS 查询结果",
+      "passed": true,
+      "detail": "Q2=46/129；Q3=资产3/4；Q4总额175"
+    },
+    {
+      "name": "基础连接事务回滚",
+      "passed": true,
+      "detail": "仅连接回滚验证，不是取消业务事务"
+    },
+    {
+      "name": "阶段范围核实",
+      "passed": true,
+      "detail": "0个触发器；高级功能只有设计"
+    },
+    {
+      "name": "真实 API 种子统计",
+      "passed": true,
+      "detail": "175元/200元；4活跃；2闲置；4续费日程"
+    },
+    {
+      "name": "无流水/无预算/空日历月份",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "非法请求、越界月份、取消状态及引用保护",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "支付创建→订阅创建→修改→日历变化",
+      "passed": true,
+      "detail": "特殊名称按字面保存；小数精度校验"
+    },
+    {
+      "name": "清理测试记录后恢复基线",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "queries": {
+    "Q1": [
+      {
+        "id": 1,
+        "name": "云笺笔记",
+        "amount": "28.00",
+        "next_billing_date": "2026-11-18",
+        "payment_label": "日常支付"
+      },
+      {
+        "id": 2,
+        "name": "星河音乐",
+        "amount": "18.00",
+        "next_billing_date": "2026-11-12",
+        "payment_label": "日常支付"
+      },
+      {
+        "id": 3,
+        "name": "云屿存储",
+        "amount": "30.00",
+        "next_billing_date": "2026-11-22",
+        "payment_label": "学习银行卡"
+      },
+      {
+        "id": 4,
+        "name": "知行课堂",
+        "amount": "99.00",
+        "next_billing_date": "2026-11-25",
+        "payment_label": "学习银行卡"
+      },
+      {
+        "id": 5,
+        "name": "光影剧场",
+        "amount": "25.00",
+        "next_billing_date": "2026-11-28",
+        "payment_label": "日常支付"
+      }
+    ],
+    "Q2": [
+      {
+        "label": "日常支付",
+        "total": "46.00"
+      },
+      {
+        "label": "学习银行卡",
+        "total": "129.00"
+      }
+    ],
+    "Q3": [
+      {
+        "id": 3,
+        "name": "云屿 2TB 空间",
+        "effective_last_used": "2026-06-01"
+      },
+      {
+        "id": 4,
+        "name": "知行课程包",
+        "effective_last_used": "2026-02-01"
+      }
+    ],
+    "Q4": [
+      {
+        "category": "entertainment",
+        "total": "18.00"
+      },
+      {
+        "category": "learning",
+        "total": "99.00"
+      },
+      {
+        "category": "productivity",
+        "total": "28.00"
+      },
+      {
+        "category": "storage",
+        "total": "30.00"
+      }
+    ]
+  },
+  "mysql_version": "8.0.46"
+}
