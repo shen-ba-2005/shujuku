@@ -11,8 +11,8 @@ import subprocess
 import sys
 import time
 
-ROOT = Path(__file__).resolve().parents[1]
-RUNTIME = ROOT / '.runtime'
+ROOT = Path(os.environ.get('SHUJUKU_PROJECT_ROOT', Path(__file__).resolve().parents[1]))
+RUNTIME = Path(os.environ.get('SHUJUKU_RUNTIME_DIR', ROOT / '.runtime'))
 CONFIG = RUNTIME / 'db.json'
 PORT = 3307
 DB_NAME = 'subscription_lab'

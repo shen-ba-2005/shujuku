@@ -1,3 +1,4 @@
+altgraph==0.17.5
 annotated-types==0.8.0
 anyio==4.16.0
 cffi==2.1.1
@@ -7,12 +8,18 @@ fastapi==0.115.12
 greenlet==3.5.6
 h11==0.16.0
 idna==3.20
+packaging==26.3
+pefile==2023.2.7
 playwright==1.51.0
 pycparser==3.12
 pydantic==2.14.3
 pydantic_core==2.50.4
 pyee==12.1.1
+pyinstaller==6.13.0
+pyinstaller-hooks-contrib==2026.10
 PyMySQL==1.1.1
+pywin32-ctypes==0.2.3
+setuptools==84.2.1
 starlette==0.46.2
 typing-inspection==0.4.5
 typing_extensions==4.16.0

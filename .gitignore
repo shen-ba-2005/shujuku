@@ -22,3 +22,6 @@ Thumbs.db
 *.log
 .runtime/
 test-results/
+build/
+dist/
+release/
