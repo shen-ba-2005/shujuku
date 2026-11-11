@@ -2,7 +2,20 @@
 
 数据库课程大作业，第 8 周阶段版本。MySQL 8 / FastAPI / PyMySQL 原生 SQL / 原生 HTML、CSS、JavaScript，前后端分离，无 ORM。全部业务数据虚构。
 
-## 快速启动（Windows PowerShell）
+## 直接使用（Windows 64 位）
+
+**[下载 Windows 应用包](https://github.com/shen-ba-2005/shujuku/releases/download/v0.8.1/shujuku-windows-x64.zip)** · [版本说明](https://github.com/shen-ba-2005/shujuku/releases/tag/v0.8.1)
+
+1. 下载应用包并**全部解压**，不要在压缩包内直接运行。
+2. 打开解压后的“屿账”文件夹，双击 **屿账.exe**。
+3. 首次准备数据请稍候，完成后自动打开浏览器；也可点击启动窗口的“打开应用”。
+4. 用完点击启动窗口的“退出应用”，等待窗口关闭。
+
+不需要安装 Python、MySQL 或编写命令。请保留 exe 旁边的 `mysql` 文件夹；个人数据保存在 `%LOCALAPPDATA%\Shujuku\data`，升级应用文件时不会重新导入示例。关闭浏览器只关闭页面。
+
+GitHub 的 **Code → Download ZIP** 下载的是源码；普通用户请使用上面的应用包。更详细的步骤见 [使用说明.txt](使用说明.txt)。
+
+## 开发者运行（Windows PowerShell）
 
 需要 Python 3.13、本机 MySQL 8.0.16+ 的 `mysqld` 在 PATH 中。当前开发机器为 MySQL 8.0.46。无需安装 Node 前端依赖。
 
@@ -58,6 +71,12 @@ backend/           FastAPI 接口，显式原生 SQL
 frontend/          页面、样式及接口调用，无外部 CDN
 database/          建表、种子数据、代表性查询
 scripts/dev.py     独立 MySQL 初始化、启动/停止、导入
+desktop_runtime.py 应用版数据库与服务生命周期
+desktop_window.py  原生 Windows 启动与退出窗口
+launch_entry.py    应用版打包入口
+launcher.spec      EXE 构建配置
+package_release.ps1 构建和组装本地发布目录
+scripts/package_archive.py 制作干净的用户下载包及校验文件
 tests/             真实 MySQL/HTTP/浏览器验收
 docs/              需求、DFD、E-R、3NF、架构、方案和证据
 AGENTS.md          长期总体约束
@@ -66,8 +85,4 @@ AGENTS.md          长期总体约束
 
 三角色责任和实际贡献分别记录在 [协作记录](docs/协作记录.md)，A/B/C 为组织标签，不伪造三位成员的参与历史。
 
-## 普通用户启动
-
-发布包中的用户只需双击 `屿账.exe`。它会自动启动项目专属数据库、服务并打开浏览器，不需要 Python、PowerShell 或 tkinter；数据保存到 `%LOCALAPPDATA%\Shujuku\data`。不要移动或单独删除发布包中的 `mysql` 文件夹。开发者构建说明见 [应用启动方案](docs/应用启动方案.md)。
-
-文件位置：`release\屿账\屿账.exe`。打开后保留启动窗口，用完点击“退出应用”即可，不需要使用任务管理器。首次使用请先读同目录的 `使用说明.txt`。
+本机已构建产物位于 `release\屿账\屿账.exe`。开发者构建说明及七项 EXE 验收范围见 [应用启动方案](docs/应用启动方案.md)。发布包通过 GitHub Release 提供，不将 MySQL 运行文件、个人数据或凭据提交进 Git 历史。

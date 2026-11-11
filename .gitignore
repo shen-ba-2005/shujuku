@@ -23,5 +23,4 @@ Thumbs.db
 .runtime/
 test-results/
 build/
-dist/
 release/

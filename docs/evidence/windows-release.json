@@ -1,0 +1,18 @@
+{
+  "version": "v0.8.1",
+  "archive": "shujuku-windows-x64.zip",
+  "bytes": 177770877,
+  "sha256": "f38191968b4ae8f88fa4882309e9c9425e6cd87ef152668438c961e97d425c97",
+  "files": 287,
+  "launcher_sha256": "f094948eaacc472aabdee730bba34a46ac458cb50556bcad5c9ec76c0166844f",
+  "includes": [
+    "Windows x64 launcher",
+    "MySQL server and original licenses",
+    "使用说明.txt"
+  ],
+  "excludes": [
+    "user database",
+    "credentials",
+    "development environment"
+  ]
+}
