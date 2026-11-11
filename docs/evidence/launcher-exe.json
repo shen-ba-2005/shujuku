@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": [
+    "冻结EXE独立启动，无Python/MySQL PATH依赖；原生窗口可见",
+    "随包MySQL中文路径、首次初始化、真实接口和静态页面",
+    "重复双击复用已运行实例，没有新建后台服务",
+    "点击退出应用正常关闭窗口、API、前端及项目MySQL",
+    "再次双击成功；用户新增数据保留且未重复导入示例",
+    "冻结版服务在真实浏览器正确呈现175元仪表盘",
+    "第二次退出同样释放所有项目端口"
+  ],
+  "data_scope": "isolated test directory",
+  "executable": "release/屿账/屿账.exe"
+}

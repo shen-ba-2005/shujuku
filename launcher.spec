@@ -1,9 +1,9 @@
-# PyInstaller onedir build. Use launcher.spec for a reproducible Windows build.
+# One-file Windows launcher. MySQL is shipped beside the executable.
 from pathlib import Path
 
 root = Path(SPECPATH)
 a = Analysis(
-    [str(root / "launcher.py")],
+    [str(root / "launch_entry.py")],
     pathex=[str(root)],
     binaries=[],
     datas=[
